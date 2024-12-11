@@ -24,8 +24,8 @@ mod_default_config(){
 
     # C1
     echo
-    echo '[MOD] 修改后台地址为 192.168.199.1'
-    sed -i 's/192.168.1.1/192.168.199.1/w /dev/stdout' package/base-files/files/bin/config_generate
+    echo '[MOD] 修改后台地址为 10.0.0.1'
+    sed -i 's/192.168.1.1/10.0.0.1/w /dev/stdout' package/base-files/files/bin/config_generate
 
     echo '[MOD] 修改时区为东八区'
     sed -i "s/'UTC'/'CST-8'\n        set system.@system[-1].zonename='Asia\/Shanghai'/w /dev/stdout" package/base-files/files/bin/config_generate
